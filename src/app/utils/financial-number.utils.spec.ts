@@ -43,14 +43,6 @@ describe('financial-number.utils', () => {
       })
     })
 
-    // describe('invalid tuple', () => {
-    //   const INVALID_SPLITTER_TEST_CASES: TestCase[] = ['']
-
-    //   it.each(INVALID_SPLITTER_TEST_CASES)('given %p', (val) => {
-    //     expect(financialNumberSplitter(val)).toEqual(td.matchers.isNumber())
-    //   })
-    // })
-
     describe('returns valid tokens', () => {
       const VALID_SPLITTER_TEST_CASES: TestCase<[[number, string], string]>[] = [
         [[-0.0001, 'k'], '-0.0001k'],

@@ -1,4 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
 @use '@angular/material' as mat;
 
 @include mat.core();
@@ -68,7 +67,7 @@ $my-theme: mat.define-dark-theme(
       warn: mat.define-palette($my-warn),
     ),
     typography: mat.define-typography-config(),
-    density: 10,
+    density: 0,
   )
 );
 

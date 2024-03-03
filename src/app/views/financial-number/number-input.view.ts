@@ -38,7 +38,5 @@ export class NumberInputView {
         }),
       )
       .subscribe()
-
-    console.log(this.financialInputControl)
   }
 }

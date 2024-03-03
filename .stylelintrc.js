@@ -14,7 +14,7 @@ module.exports = {
     'selector-type-no-unknown': [
       true,
       {
-        ignoreTypes: ['/^page/', '/^mat/', '/^cinq/', '/^snack/', '/^ng/', '/^text/', '/^action/'],
+        ignoreTypes: ['/^mat/', '/^snack/', '/^ng/'],
       },
     ],
   },

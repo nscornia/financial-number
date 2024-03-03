@@ -9,7 +9,6 @@ import { NumberStateService } from '../../services/financial-number.service'
   imports: [
     // @angular
     CommonModule,
-    ReactiveFormsModule,
   ],
   templateUrl: './number-display.view.html',
   styleUrls: ['./financial-number.scss', './number-display.view.scss'],
@@ -17,7 +16,5 @@ import { NumberStateService } from '../../services/financial-number.service'
 export class NumberDisplayView {
   public financialNumberFormatted = this.financialNumberService.financialNumber
 
-  constructor(private financialNumberService: NumberStateService) {
-    // console.log(this.financialNumberService)
-  }
+  constructor(private financialNumberService: NumberStateService) {}
 }

@@ -9,14 +9,8 @@ import { NumberDisplayView } from './number-display.view'
     CommonModule,
     RouterModule.forChild([
       { path: '', redirectTo: 'input', pathMatch: 'full' },
-      {
-        path: 'input',
-        component: NumberInputView,
-      },
-      {
-        path: 'display',
-        component: NumberDisplayView,
-      },
+      { path: 'input', component: NumberInputView },
+      { path: 'display', component: NumberDisplayView },
     ]),
   ],
 })

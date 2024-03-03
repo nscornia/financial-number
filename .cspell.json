@@ -24,6 +24,6 @@
       "noSuggest": true
     }
   ],
-  "ignorePaths": ["package.json", "package-lock.json", "project-words.txt", "src/icons/", ".*"],
+  "ignorePaths": ["package.json", "package-lock.json", "project-words.txt", ".*"],
   "ignoreRegExpList": ["Email", "Urls", "#[\\w-]*"]
 }

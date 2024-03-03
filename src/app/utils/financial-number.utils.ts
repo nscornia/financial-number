@@ -3,6 +3,9 @@ import _ from 'lodash-es'
 import { FINANCIAL_ABBREVIATION_MAPPING } from './financial-number.model'
 import { financialNumberValidate, isNumber } from './type-guard.util'
 
+/**
+ * Angular Error for `financial-number` validation.
+ */
 export const NOT_FINANCIAL_NUMBER_ERROR = {
   notFinancialNumber: {
     message: 'Invalid Financial Number Format. The format must be a number followed by a "k", "m", or "b"',
@@ -11,7 +14,6 @@ export const NOT_FINANCIAL_NUMBER_ERROR = {
 
 /**
  * Simple Regex to create tokens for numbers and letters
- *
  */
 export const FINANCIAL_NUMBER_SPLITTER_REGEX = /[a-zA-Z.]+|[-0-9.]+/g
 
@@ -21,8 +23,6 @@ export const FINANCIAL_NUMBER_SPLITTER_REGEX = /[a-zA-Z.]+|[-0-9.]+/g
  * @returns `null` if valid otherwise `{ notFinancialNumber: true }`
  */
 export function financialNumberValidatorFn(control: AbstractControl): ValidationErrors | null {
-  // console.log(control, control.value)
-
   const financialNumberParts = financialNumberSplitter(control?.value)
   const valid = financialNumberParts != null && financialNumberValidate(financialNumberParts)
 

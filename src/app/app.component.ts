@@ -10,10 +10,8 @@ import { RouterModule, RouterOutlet } from '@angular/router'
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  public title = 'financial-number'
-
   public routes = [
-    { title: 'Financial Number Input', path: 'input' },
-    { title: 'Financial Number Display', path: 'display' },
+    { title: 'Number Input View', path: 'input' },
+    { title: 'Number Display View', path: 'display' },
   ]
 }

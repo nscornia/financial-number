@@ -29,6 +29,4 @@ export class NumberStateService {
   }
 
   public formatter = new Intl.NumberFormat(navigator.language ?? 'en-US')
-
-  constructor() {}
 }

@@ -9,7 +9,10 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideAnimations(),
     importProvidersFrom(BrowserModule, BrowserAnimationsModule),
-    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'outline' } },
+    {
+      provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
+      useValue: { appearance: 'outline' },
+    },
     provideRouter(routes),
   ],
 }
