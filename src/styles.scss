@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+@import './ng-new-styles.scss';
+@import './theme.scss';
+
+body {
+  background-color: $my-dark-contrast;
+  color: $my-light-contrast;
+}

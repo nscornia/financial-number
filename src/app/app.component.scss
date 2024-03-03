@@ -1,0 +1,35 @@
+// Mostly `ng new` generated styles
+
+:host {
+  main {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: inherit;
+    position: relative;
+
+    .content {
+      display: flex;
+      flex-flow: column;
+      justify-content: space-around;
+
+      width: 100%;
+      max-width: 700px;
+      margin-bottom: 3rem;
+
+      border-radius: 8px;
+      background-color: var(--gray-900);
+      padding: 16px;
+
+      .logo-container {
+        .angular-logo {
+          background: no-repeat url(../assets/angular.svg);
+          height: 36px;
+        }
+      }
+    }
+  }
+}

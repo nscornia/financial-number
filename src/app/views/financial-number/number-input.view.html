@@ -1,0 +1,9 @@
+<div class="financial-number-card">
+  <mat-form-field color="accent" class="financial-number-input">
+    <mat-label>Financial Number</mat-label>
+    <input matInput [formControl]="financialInputControl" placeholder="Placeholder" />
+    <mat-error *ngIf="financialInputControl.hasError('notFinancialNumber')">
+      {{financialInputControl.getError('notFinancialNumber').message}}
+    </mat-error>
+  </mat-form-field>
+</div>

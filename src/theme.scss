@@ -1,0 +1,80 @@
+/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$my-dark-contrast: #0f0f11;
+$my-light-contrast: #fbfbfb;
+
+$my-primary: (
+  100: #ff5bb3,
+  500: deeppink,
+  700: #b30e67,
+  contrast: (
+    100: $my-dark-contrast,
+    500: $my-dark-contrast,
+    700: $my-light-contrast,
+  ),
+  default: #ff1493,
+  lighter: #ff5bb3,
+  darker: #b30e67,
+  text: deeppink,
+  default-contrast: $my-dark-contrast,
+  lighter-contrast: $my-dark-contrast,
+  darker-contrast: $my-light-contrast,
+);
+
+$my-accent: (
+  100: #aa5bf8,
+  500: #8514f5,
+  700: #5d0eac,
+  contrast: (
+    100: $my-dark-contrast,
+    500: $my-light-contrast,
+    700: $my-light-contrast,
+  ),
+  default: #8514f5,
+  lighter: #aa5bf8,
+  darker: #5d0eac,
+  text: #8514f5,
+  default-contrast: $my-light-contrast,
+  lighter-contrast: $my-dark-contrast,
+  darker-contrast: $my-light-contrast,
+);
+
+$my-warn: (
+  100: #f55c87,
+  500: #f11653,
+  700: #a90f3a,
+  contrast: (
+    100: $my-dark-contrast,
+    500: $my-light-contrast,
+    700: $my-light-contrast,
+  ),
+  default: #f11653,
+  lighter: #f55c87,
+  darker: #a90f3a,
+  text: #f11653,
+  default-contrast: $my-light-contrast,
+  lighter-contrast: $my-dark-contrast,
+  darker-contrast: $my-light-contrast,
+);
+
+$my-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: mat.define-palette($my-primary),
+      accent: mat.define-palette($my-accent),
+      warn: mat.define-palette($my-warn),
+    ),
+    typography: mat.define-typography-config(),
+    density: 10,
+  )
+);
+
+@include mat.all-component-themes($my-theme);
+
+body {
+  background-color: $my-dark-contrast;
+  color: $my-light-contrast;
+}
